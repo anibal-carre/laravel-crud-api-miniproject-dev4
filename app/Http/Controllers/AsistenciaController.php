@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class AsistenciaController extends Controller
 {
+
     public function registrarAsistencia(Request $request)
     {
         $asistencia = new Asistencia([

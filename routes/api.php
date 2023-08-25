@@ -5,7 +5,6 @@ use App\Http\Controllers\AsistenciaController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\MatriculaController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::resource('docentes', DocenteController::class);

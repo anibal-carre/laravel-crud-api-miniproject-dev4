@@ -11,9 +11,7 @@ class Docente extends Model
 
     protected $fillable = ['nombre', 'correo'];
 
-    // Otras propiedades y relaciones que puedas necesitar
 
-    // Ejemplo de relación si un docente puede tener muchos cursos
     public function cursos()
     {
         return $this->hasMany(Curso::class);
