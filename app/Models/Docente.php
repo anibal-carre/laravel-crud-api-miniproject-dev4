@@ -11,6 +11,10 @@ class Docente extends Model
 
     protected $fillable = ['nombre', 'correo'];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
 
     public function cursos()
     {

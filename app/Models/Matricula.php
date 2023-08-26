@@ -16,8 +16,11 @@ class Matricula extends Model
         'alumno_id',
         'curso_id',
         'fecha_matricula'
+    ];
 
-        // Otros atributos que quieras agregar a la tabla pivot
+    protected $hidden = [
+        'created_at',
+        'updated_at'
     ];
 
     public function alumno()

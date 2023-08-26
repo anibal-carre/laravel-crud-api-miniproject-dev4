@@ -19,7 +19,6 @@ return new class extends Migration
             $table->unsignedBigInteger('curso_id');
             $table->date('fecha_asistencia');
             $table->string('tipo_asistencia'); // A, T, F
-            // Otros campos necesarios
             $table->timestamps();
 
             $table->foreign('alumno_id')->references('id')->on('alumnos')->onDelete('cascade');

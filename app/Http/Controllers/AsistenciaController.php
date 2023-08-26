@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AsistenciaRequest;
 use App\Models\Asistencia;
-use Illuminate\Http\Request;
+
 
 class AsistenciaController extends Controller
 {
 
-    public function registrarAsistencia(Request $request)
+    public function index()
+    {
+        $asistencias = Asistencia::with('alumno', 'curso')->get();
+        return response()->json($asistencias);
+    }
+    public function registrarAsistencia(AsistenciaRequest $request)
     {
         $asistencia = new Asistencia([
             'alumno_id' => $request->input('alumno_id'),

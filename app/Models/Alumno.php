@@ -14,6 +14,12 @@ class Alumno extends Model
 
     protected $fillable = ["nombre", "apellido", "correo"];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
+
     public function matriculas()
     {
         return $this->hasMany(Matricula::class);

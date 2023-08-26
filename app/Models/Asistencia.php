@@ -18,6 +18,13 @@ class Asistencia extends Model
         'fecha_asistencia',
         'tipo_asistencia'
     ];
+
+    protected $hidden = [
+
+        'created_at',
+        'updated_at'
+    ];
+
     public function alumno()
     {
         return $this->belongsTo(Alumno::class);
